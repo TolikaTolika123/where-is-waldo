@@ -1,0 +1,32 @@
+.menu {
+  position: absolute;
+  background-color: #fff;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.menuItem:hover {
+  background-color: #dfe6e9;
+}
+
+.menuItem:last-child {
+  border: 0;
+  margin-bottom: 0;
+  padding: 5px 15px;
+}
+
+.menuItem img {
+  width: 30px;
+  height: 35px;
+}
+
+.menuItem p {
+  margin: 0;
+}

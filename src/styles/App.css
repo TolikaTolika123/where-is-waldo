@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #2d3436;
+}
+
+.game-field {
+  width: 100%;
+  position: relative;
+}
+
+.game-bg {
+  width: 100%;
+  height: auto;
+  cursor: crosshair;
+}

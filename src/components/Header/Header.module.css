@@ -1,0 +1,43 @@
+.header {
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #636e72;
+  color: #fff;
+  margin: 0;
+}
+
+.homeBtn {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.timer {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.findList {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.findItem {
+  text-align: center;
+}
+
+.findItem img {
+  width: 40px;
+  height: 45px;
+  margin-bottom: 5px;
+}
+
+.findItem p {
+  margin: 0;
+}
