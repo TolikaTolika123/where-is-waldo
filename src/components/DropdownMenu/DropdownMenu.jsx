@@ -1,25 +1,46 @@
 import React from 'react'
 import cl from './DropdownMenu.module.css'
 
-import waldoImg from '../../images/waldo.png';
-import odlawImg from '../../images/odlaw.png';
-import wizardImg from '../../images/wizard.png';
+import { firstLetterToUpperCase } from '../../utils'
 
-const DropdownMenu = ({ pos }) => {
+const DropdownMenu = ({ pos, characters, setCharacters }) => {
+  // const validateMove = (character) => {
+  //   console.log('click')
+  //   if (
+  //     pos.x > process.env[`REACT_APP_${character.toUpperCase()}_LEFT`]
+  //     && pos.y > process.env[`REACT_APP_${character.toUpperCase()}_TOP`]
+  //     && pos.x < process.env[`REACT_APP_${character.toUpperCase()}_RIGHT`]
+  //     && pos.y < process.env[`REACT_APP_${character.toUpperCase()}_BOTTOM`]
+  //   ) {
+  //     console.log('working')
+  //   }
+  // }
+
+  const validateMove = character => {
+    if (
+      pos.x > process.env[`REACT_APP_${character.name.toUpperCase()}_LEFT`]
+      && pos.y > process.env[`REACT_APP_${character.name.toUpperCase()}_TOP`]
+      && pos.x < process.env[`REACT_APP_${character.name.toUpperCase()}_RIGHT`]
+      && pos.y < process.env[`REACT_APP_${character.name.toUpperCase()}_BOTTOM`]
+    ) {
+      confirmMove(character)
+    }
+  }
+
+  const confirmMove = character => {
+    const changedCharacters = structuredClone(characters);
+    changedCharacters.find(char => char.id === character.id).found = true;
+    setCharacters(changedCharacters)
+  }
+
   return (
-    <div className={cl.menu} style={{left: pos.x + 15, top: pos.y + 15}}>
-      <div className={cl.menuItem}>
-        <img src={waldoImg} alt="Waldo" className='findImg' />
-        <p>Waldo</p>
-      </div>
-      <div className={cl.menuItem}>
-        <img src={odlawImg} alt="Odlaw" className='findImg' />
-        <p>Odlaw</p>
-      </div>
-      <div className={cl.menuItem}>
-        <img src={wizardImg} alt="Wizard" className='findImg' />
-        <p>Wizard</p>
-      </div>
+    <div className={cl.menu} style={{ left: pos.x + 15, top: pos.y + 15 }}>
+      {characters.map(character => (
+        <div key={character.id} onClick={() => validateMove(character)} className={cl.menuItem}>
+          <img src={character.img} alt={character.name} />
+          <p>{firstLetterToUpperCase(character.name)}</p>
+        </div>
+      ))}
     </div>
   )
 }
