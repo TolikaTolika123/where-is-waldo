@@ -3,11 +3,11 @@ import cl from './Header.module.css'
 
 import { firstLetterToUpperCase } from '../../utils'
 
-const Header = React.forwardRef(({ characters }, ref) => {
+const Header = React.forwardRef(({ characters, timer }, ref) => {
   return (
     <header ref={ref} className={cl.header}>
       <button className={cl.homeBtn}>Return to home</button>
-      <p className={cl.timer}>00.00.00</p>
+      <p className={cl.timer}>{timer}</p>
       <div className={cl.findList}>
         {characters.map(character => {
           if (character.found === false) {

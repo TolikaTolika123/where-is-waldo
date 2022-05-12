@@ -4,18 +4,8 @@ import cl from './DropdownMenu.module.css'
 import { firstLetterToUpperCase } from '../../utils'
 
 const DropdownMenu = ({ pos, characters, setCharacters }) => {
-  // const validateMove = (character) => {
-  //   console.log('click')
-  //   if (
-  //     pos.x > process.env[`REACT_APP_${character.toUpperCase()}_LEFT`]
-  //     && pos.y > process.env[`REACT_APP_${character.toUpperCase()}_TOP`]
-  //     && pos.x < process.env[`REACT_APP_${character.toUpperCase()}_RIGHT`]
-  //     && pos.y < process.env[`REACT_APP_${character.toUpperCase()}_BOTTOM`]
-  //   ) {
-  //     console.log('working')
-  //   }
-  // }
 
+  // executes when user selects character and checks if guess was right
   const validateMove = character => {
     if (
       pos.x > process.env[`REACT_APP_${character.name.toUpperCase()}_LEFT`]
@@ -27,6 +17,7 @@ const DropdownMenu = ({ pos, characters, setCharacters }) => {
     }
   }
 
+  // executes when user finds someone and sets found value of that character to true
   const confirmMove = character => {
     const changedCharacters = structuredClone(characters);
     changedCharacters.find(char => char.id === character.id).found = true;
