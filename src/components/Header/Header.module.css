@@ -15,11 +15,13 @@
   font-size: 1.3rem;
   color: #fff;
   cursor: pointer;
+  text-decoration: none;
 }
 
-.timer {
+.timer, .title {
   font-size: 2rem;
   font-weight: 500;
+  margin: 0;
 }
 
 .findList {
@@ -48,4 +50,8 @@
 
 .findItem.overlay p {
   color: rgba(255, 255, 255, .5);
+}
+
+.waldoImg {
+  width: 60px;
 }
