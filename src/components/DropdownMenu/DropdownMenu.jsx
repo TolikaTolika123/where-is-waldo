@@ -7,7 +7,6 @@ const DropdownMenu = ({ pos, characters, setCharacters }) => {
 
   // executes when user selects character and checks if guess was right
   const validateMove = character => {
-    console.log(character)
     if (
       pos.x > character.cords.xStart
       && pos.x < character.cords.xEnd

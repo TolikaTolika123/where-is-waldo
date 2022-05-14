@@ -9,6 +9,8 @@ import './styles/App.css'
 import { convertSeconds } from './utils';
 
 import beachImg from './images/beach.jpg';
+import battleImg from './images/battle.jpg'
+
 import waldoImg from './images/waldo.png';
 import odlawImg from './images/odlaw.png';
 import wizardImg from './images/wizard.png';
@@ -30,6 +32,14 @@ function App() {
         { name: 'waldo', found: false, img: waldoImg, id: 1, cords: {xStart: 977, xEnd: 1044, yStart: 625, yEnd: 753} },
         { name: 'odlaw', found: false, img: odlawImg, id: 2, cords: {xStart: 448, xEnd: 479, yStart: 636, yEnd: 767} },
         { name: 'wizard', found: false, img: wizardImg, id: 3, cords: {xStart: 1164, xEnd: 1220, yStart: 627, yEnd: 738} }
+      ]
+    },
+    {
+      name: 'battle',
+      id: 2,
+      img: battleImg,
+      characters: [
+        { name: 'waldo', found: false, img: waldoImg, id: 1, cords: {xStart: 1596, xEnd: 1633, yStart: 378, yEnd: 465} }
       ]
     }
   ]
