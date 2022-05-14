@@ -1,0 +1,43 @@
+.home {
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+}
+
+.levelCard {
+  max-width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 15px;
+}
+
+.levelImg {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.levelContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.levelTitle {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.openLevel {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 7.5px;
+  border: 2px solid black;
+  color: #000;
+}
+
+.openLevel:hover {
+  background-color: #f0f0f0;
+}

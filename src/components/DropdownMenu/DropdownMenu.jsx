@@ -7,11 +7,12 @@ const DropdownMenu = ({ pos, characters, setCharacters }) => {
 
   // executes when user selects character and checks if guess was right
   const validateMove = character => {
+    console.log(character)
     if (
-      pos.x > process.env[`REACT_APP_${character.name.toUpperCase()}_LEFT`]
-      && pos.y > process.env[`REACT_APP_${character.name.toUpperCase()}_TOP`]
-      && pos.x < process.env[`REACT_APP_${character.name.toUpperCase()}_RIGHT`]
-      && pos.y < process.env[`REACT_APP_${character.name.toUpperCase()}_BOTTOM`]
+      pos.x > character.cords.xStart
+      && pos.x < character.cords.xEnd
+      && pos.y > character.cords.yStart
+      && pos.y < character.cords.yEnd
     ) {
       confirmMove(character)
     }

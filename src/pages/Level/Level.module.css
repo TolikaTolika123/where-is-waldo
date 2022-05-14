@@ -1,0 +1,50 @@
+.gameField {
+  width: 100%;
+  position: relative;
+}
+
+.gameBg {
+  width: 100%;
+  height: auto;
+  cursor: crosshair;
+}
+
+.startPopup {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .9);
+  color: #000;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.startPopupContent {
+  border-radius: 15px;
+  width: 500px;
+  padding: 30px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.startPopupText {
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.startPopupBtn {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 5px 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.startPopupBtn:hover {
+  background-color: #ecf0f1;
+}
